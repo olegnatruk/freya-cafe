@@ -99,10 +99,17 @@ export default function Hero({ onOpenReserve }) {
             </div>
 
             {/* Floating Highlight Badge 1: Salted Cream Coffee */}
-            <div className="absolute -top-6 -left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-[#2C201C]/10 max-w-[220px] hidden sm:block animate-bounce-slow">
+            <div className="absolute -top-6 -left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-[#2C201C]/10 max-w-[230px] hidden sm:block animate-float-bean">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#F4E4DF] flex items-center justify-center text-[#C86D51]">
+                <div className="w-10 h-10 rounded-xl bg-[#F4E4DF] flex items-center justify-center text-[#C86D51] relative">
                   <CoffeeIcon size={22} />
+                  {/* Steaming Coffee Effect */}
+                  <div className="absolute -top-4 left-2.5 pointer-events-none opacity-80">
+                    <svg width="18" height="20" viewBox="0 0 24 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-[#C86D51]">
+                      <path d="M6 28 C 4 20, 10 16, 8 8 C 7 4, 9 2, 8 0" className="animate-steam-1" />
+                      <path d="M14 30 C 12 22, 18 18, 16 10 C 15 6, 17 3, 16 0" className="animate-steam-2" />
+                    </svg>
+                  </div>
                 </div>
                 <div>
                   <span className="text-xs font-bold text-[#C86D51] uppercase tracking-wide">Signature Brew</span>
@@ -112,10 +119,14 @@ export default function Hero({ onOpenReserve }) {
             </div>
 
             {/* Floating Highlight Badge 2: Candle Workshop */}
-            <div className="absolute -bottom-6 -right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-[#2C201C]/10 max-w-[240px] hidden sm:block">
+            <div className="absolute -bottom-6 -right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-[#2C201C]/10 max-w-[240px] hidden sm:block animate-float-bean" style={{ animationDelay: '3s' }}>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#EBF0EC] flex items-center justify-center text-[#607765]">
+                <div className="w-10 h-10 rounded-xl bg-[#EBF0EC] flex items-center justify-center text-[#607765] relative">
                   <CandleIcon size={22} />
+                  {/* Flame Flicker Effect */}
+                  <div className="absolute -top-2 left-4 text-[#D98E3A] animate-flame-flicker pointer-events-none">
+                    <div className="w-2 h-2.5 rounded-full bg-[#E8A858] blur-[1px]"></div>
+                  </div>
                 </div>
                 <div>
                   <span className="text-xs font-bold text-[#607765] uppercase tracking-wide">Studio Activity</span>

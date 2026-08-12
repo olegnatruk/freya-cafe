@@ -10,6 +10,7 @@ import ReviewsSection from './components/ReviewsSection';
 import VisitContactSection from './components/VisitContactSection';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
+import FloatingBeans from './components/FloatingBeans';
 import { CoffeeIcon, CandleIcon, CheckIcon, SparklesIcon } from './components/Icons';
 
 export default function App() {
@@ -28,8 +29,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF6F0] text-[#211A17] flex flex-col font-sans">
+    <div className="min-h-screen bg-[#FAF6F0] text-[#211A17] flex flex-col font-sans relative">
       
+      {/* Ambient Floating Coffee Beans */}
+      <FloatingBeans />
+
       {/* Top Navbar */}
       <Navbar onOpenReserve={() => setReserveModalOpen(true)} />
 

@@ -1,4 +1,20 @@
-# Logs
+# Dependencies
+node_modules
+.pnpm-store
+
+# Production Build Output
+dist
+dist-ssr
+build
+
+# Local Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs & Debug Output
 logs
 *.log
 npm-debug.log*
@@ -7,18 +23,34 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Playwright & Testing Artifacts
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+inspect_fb.js
+fb_scraped_data.json
+capture_preview.js
+test_preview.js
+test_preview.cjs
 
-# Editor directories and files
+# Editor & OS Metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.bak
+
+# Cache
+.eslintcache
+.stylelintcache
+.cache
+.vite

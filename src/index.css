@@ -266,10 +266,94 @@ h1, h2, h3, h4, .font-serif {
   50% { opacity: 0.85; transform: scale(1.03); }
 }
 
+@keyframes floatBean {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) rotate(15deg) scale(1.05);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes steamWave {
+  0% {
+    stroke-dashoffset: 40;
+    opacity: 0.2;
+    transform: translateY(0) scaleX(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-8px) scaleX(1.15);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+    transform: translateY(-16px) scaleX(0.9);
+  }
+}
+
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    filter: drop-shadow(0 0 6px rgba(232, 168, 88, 0.8));
+  }
+  25% {
+    transform: scale(1.08) rotate(2deg);
+    filter: drop-shadow(0 0 10px rgba(232, 168, 88, 0.95));
+  }
+  50% {
+    transform: scale(0.96) rotate(-2deg);
+    filter: drop-shadow(0 0 5px rgba(232, 168, 88, 0.7));
+  }
+  75% {
+    transform: scale(1.05) rotate(1deg);
+    filter: drop-shadow(0 0 8px rgba(232, 168, 88, 0.9));
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 10px 30px rgba(200, 109, 81, 0.15);
+  }
+  50% {
+    box-shadow: 0 20px 45px rgba(200, 109, 81, 0.35);
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
 
 .animate-pulse-slow {
   animation: pulseSlow 4s infinite ease-in-out;
+}
+
+.animate-float-bean {
+  animation: floatBean 8s infinite ease-in-out;
+}
+
+.animate-flame-flicker {
+  animation: flameFlicker 2.5s infinite ease-in-out;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 3.5s infinite ease-in-out;
+}
+
+.animate-steam-1 {
+  stroke-dasharray: 40;
+  animation: steamWave 3s infinite linear;
+}
+
+.animate-steam-2 {
+  stroke-dasharray: 40;
+  animation: steamWave 3s infinite linear 1s;
+}
+
+.animate-steam-3 {
+  stroke-dasharray: 40;
+  animation: steamWave 3s infinite linear 2s;
 }
