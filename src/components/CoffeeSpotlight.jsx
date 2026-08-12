@@ -136,65 +136,14 @@ export default function CoffeeSpotlight({ onSelectCoffee }) {
               </div>
             </div>
 
-            {/* Flavor Intensity Meters Card */}
-            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-4">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#E8A858] flex items-center gap-2">
-                <SparklesIcon size={14} />
-                Flavor Profile & Intensity
-              </h4>
-
-              <div className="space-y-3">
-                {/* Boldness Bar */}
-                <div>
-                  <div className="flex justify-between text-xs mb-1">
-                    <span className="text-[#FAF6F0]/80">Espresso Boldness</span>
-                    <span className="font-bold text-[#E8A858]">{selectedCoffee.boldness}%</span>
-                  </div>
-                  <div className="w-full h-2 rounded-full bg-white/10 overflow-hidden">
-                    <div 
-                      className="h-full bg-gradient-to-r from-[#C86D51] to-[#E8A858] transition-all duration-500 rounded-full"
-                      style={{ width: `${selectedCoffee.boldness}%` }}
-                    ></div>
-                  </div>
-                </div>
-
-                {/* Creaminess Bar */}
-                <div>
-                  <div className="flex justify-between text-xs mb-1">
-                    <span className="text-[#FAF6F0]/80">Velvet Creaminess</span>
-                    <span className="font-bold text-[#E8A858]">{selectedCoffee.creaminess}%</span>
-                  </div>
-                  <div className="w-full h-2 rounded-full bg-white/10 overflow-hidden">
-                    <div 
-                      className="h-full bg-gradient-to-r from-[#D98E3A] to-[#E8A858] transition-all duration-500 rounded-full"
-                      style={{ width: `${selectedCoffee.creaminess}%` }}
-                    ></div>
-                  </div>
-                </div>
-
-                {/* Sweetness Bar */}
-                <div>
-                  <div className="flex justify-between text-xs mb-1">
-                    <span className="text-[#FAF6F0]/80">Sweetness Balance</span>
-                    <span className="font-bold text-[#E8A858]">{selectedCoffee.sweetness}%</span>
-                  </div>
-                  <div className="w-full h-2 rounded-full bg-white/10 overflow-hidden">
-                    <div 
-                      className="h-full bg-[#C86D51] transition-all duration-500 rounded-full"
-                      style={{ width: `${selectedCoffee.sweetness}%` }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Key Ingredients */}
-              <div className="pt-2 flex flex-wrap gap-2">
-                {selectedCoffee.ingredients.map((ing, idx) => (
-                  <span key={idx} className="text-[11px] px-2.5 py-1 rounded-full bg-white/10 text-[#FAF6F0]/90 font-medium">
-                    ✓ {ing}
-                  </span>
-                ))}
-              </div>
+            {/* Key Ingredients Pill Badge */}
+            <div className="flex flex-wrap items-center gap-2 pt-1">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#E8A858] mr-1">Craft Ingredients:</span>
+              {selectedCoffee.ingredients.map((ing, idx) => (
+                <span key={idx} className="text-xs px-3 py-1 rounded-full bg-white/10 text-[#FAF6F0]/90 font-medium border border-white/10">
+                  ✓ {ing}
+                </span>
+              ))}
             </div>
 
           </div>
