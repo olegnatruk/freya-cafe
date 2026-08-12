@@ -30,10 +30,10 @@ export default function WorkshopSection({ onOpenReserve }) {
                 Creative Studio Session
               </div>
 
-              <div className="absolute bottom-6 left-6 right-6 text-white space-y-2">
+              <div className="absolute bottom-6 left-6 right-6 pr-24 sm:pr-32 md:pr-36 max-w-[65%] sm:max-w-[70%] text-white space-y-1.5">
                 <span className="text-xs uppercase tracking-widest text-[#E8A858] font-bold">Upcoming Edition</span>
-                <h3 className="text-2xl font-serif font-bold">Creative Candles: Candle-Making 102</h3>
-                <p className="text-sm text-[#FAF6F0]/80">
+                <h3 className="text-xl sm:text-2xl font-serif font-bold leading-tight">Creative Candles: Candle-Making 102</h3>
+                <p className="text-xs sm:text-sm text-[#FAF6F0]/85 line-clamp-2 sm:line-clamp-3">
                   Intimate hands-on soy wax candle formulation, custom scent blending, dried botanical styling.
                 </p>
               </div>
