@@ -54,9 +54,14 @@ export default function VisitContactSection({ onSubmitInquiry }) {
                 </div>
                 <div>
                   <h4 className="font-serif font-bold text-white text-base">Address</h4>
-                  <p className="text-sm text-[#FAF6F0]/80 mt-0.5">
+                  <a 
+                    href="https://maps.app.goo.gl/XMwr2A81uqq2HoT37" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-sm text-[#FAF6F0]/80 mt-0.5 block hover:text-[#E8A858] hover:underline"
+                  >
                     JP Laurel Highway, Marauoy, Lipa City, Batangas, Philippines
-                  </p>
+                  </a>
                 </div>
               </div>
 
@@ -88,13 +93,13 @@ export default function VisitContactSection({ onSubmitInquiry }) {
 
             </div>
 
-            {/* Map Preview Placeholder Widget */}
+            {/* Map Preview Widget */}
             <div className="rounded-2xl overflow-hidden border border-white/10 relative h-48 bg-[#211A17] flex items-center justify-center p-6 text-center">
               <div className="space-y-2">
                 <MapPinIcon size={32} className="text-[#C86D51] mx-auto animate-bounce-slow" />
                 <h4 className="font-serif font-bold text-white text-sm">JP Laurel Highway, Lipa City</h4>
                 <a 
-                  href="https://maps.google.com/?q=JP+Laurel+Highway+Lipa+City" 
+                  href="https://maps.app.goo.gl/XMwr2A81uqq2HoT37" 
                   target="_blank" 
                   rel="noreferrer"
                   className="btn btn-primary btn-sm text-xs inline-flex items-center gap-1.5"
