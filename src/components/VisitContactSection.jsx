@@ -93,18 +93,24 @@ export default function VisitContactSection({ onSubmitInquiry }) {
 
             </div>
 
-            {/* Map Preview Widget */}
-            <div className="rounded-2xl overflow-hidden border border-white/10 relative h-48 bg-[#211A17] flex items-center justify-center p-6 text-center">
-              <div className="space-y-2">
-                <MapPinIcon size={32} className="text-[#C86D51] mx-auto animate-bounce-slow" />
-                <h4 className="font-serif font-bold text-white text-sm">JP Laurel Highway, Lipa City</h4>
+            {/* Interactive Live Google Maps Embed Card */}
+            <div className="rounded-2xl overflow-hidden border border-white/10 relative h-64 shadow-2xl group bg-[#211A17]">
+              <iframe
+                title="Freya Studio Cafe Google Maps Location"
+                src="https://maps.google.com/maps?q=Freya%20Studio%20Cafe%20JP%20Laurel%20Highway%20Lipa%20City&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-full border-0 opacity-90 transition-opacity group-hover:opacity-100"
+                loading="lazy"
+                allowFullScreen
+              ></iframe>
+              <div className="absolute bottom-3 right-3 z-10">
                 <a 
                   href="https://maps.app.goo.gl/XMwr2A81uqq2HoT37" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="btn btn-primary btn-sm text-xs inline-flex items-center gap-1.5"
+                  className="btn btn-primary btn-sm text-xs shadow-xl inline-flex items-center gap-1.5 hover:scale-105 transition-transform"
                 >
-                  Open in Google Maps
+                  <MapPinIcon size={14} />
+                  Open in Google Maps App
                 </a>
               </div>
             </div>
